@@ -1,0 +1,13 @@
+body {
+  margin-bottom: 80px;
+}
+
+/* Make post names large. */
+.post-name {
+  font-size: 24pt;
+}
+
+/* Make post content green. */
+.post-content {
+  color: green;
+}
