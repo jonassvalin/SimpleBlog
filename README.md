@@ -1,2 +1,2 @@
 # SimpleBlog
-This is (will be) a blog built using HTML/CSS/JavaScript
+This is (will be) a blog built using HTML/CSS/JavaScript/Bootstrap
