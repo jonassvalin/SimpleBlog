@@ -1,7 +1,7 @@
 // This JavaScript program reads "posts.json" and renders
 // the data to the page. Inspired by Curran Kelleher
 
-(function () {
+(function() {
 
   // Adds a DOM structure for each post.
   function renderPosts(posts) {

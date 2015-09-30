@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Awesome Things</title>
 
@@ -14,42 +14,32 @@
   </head>
 
   <body>
-    <div class="navbar navbar-inverse navbar-static-top">
-      <div class="container">
-        <a href="#" class="navbar-brand">Awesome Things</a>
+    <div id="top-navbar" class="navbar navbar-inverse navbar-static-top">
+     <div class="container">
+       <a href="#home" class="navbar-brand">Awesome Things</a>
 
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+       <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
 
-        <div class="collapse navbar-collapse navHeaderCollapse">
-          <ul class ="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
+       <div class="collapse navbar-collapse navHeaderCollapse">
+         <ul id="navbar-links" class="nav navbar-nav navbar-right">
+           <li><a href="#home">Home</a></li>
 
-            <li><a href="#">About</a></li>
+           <li><a href="#about">About</a></li>
 
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+           <li><a href="#contact">Contact</a></li>
+         </ul>
+       </div>
+     </div>
+   </div>
 
-    <div class="container">
+   <div id="content">
+   </div>
 
-      <div class="jumbotron text-center" >
-        <h1>Welcome to Awesome Things!</h1>
-        <p>This is where I blog about things that I find particularly awesome.</p>
-      </div>
-
-    </div>
-    <div class="container">
-      <div id="posts">
-      </div>
-    </div>
-
-    <div class="navbar navbar-default navbar-fixed-bottom">
+    <div id="bottom-navbar" class="navbar navbar-default navbar-fixed-bottom">
 
       <div class="container">
         <p class="navbar-text pull-left">Site Built By Jonas Svalin</p>
@@ -63,6 +53,8 @@
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
     <script src="js/bootstrap.js"></script>
+
+    <script src="navigation.js"></script>
 
     <script src="main.js"></script>
   </body>
