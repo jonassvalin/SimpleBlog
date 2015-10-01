@@ -43,11 +43,19 @@
 
     // Set the "content" div innerHTML based on the fragment identifier.
     getContent(fragmentId, function (content) {
-      contentDiv.innerHTML = content;
+      $('div#content').html(content);
     });
 
     // Toggle the "active" class on the link currently navigated to.
     setActiveLink(fragmentId);
+
+    if(fragmentId === "home") {
+      // The main program, which gets then renders posts.
+      console.log("Posts")
+      getPosts(function (posts) {
+        renderPosts(posts);
+      });
+    }
   }
 
   // If no fragment identifier is provided,
@@ -58,8 +66,7 @@
   }
 
   // Navigate once to the initial fragment identifier.
-  navigate();
-
+  //navigate();
   window.addEventListener("hashchange", navigate);
 
 }());

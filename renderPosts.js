@@ -60,6 +60,7 @@
   }
 
   // The main program, which gets then renders posts.
+  console.log("Posts")
   getPosts(function (posts) {
     renderPosts(posts);
   });
