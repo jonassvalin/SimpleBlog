@@ -13,11 +13,12 @@
 
       // Create the DOM elements.
       var postDiv = document.createElement("div"),
-          postNameDiv = document.createElement("div"),
+          postNameDiv = document.createElement("a"),
           postContentDiv = document.createElement("div");
 
       // Set the content of each element.
       postNameDiv.innerHTML = post.name;
+      postNameDiv.setAttribute('href', "#post" + post.id);
       postContentDiv.innerHTML = post.content;
 
       // Set CSS classes on each div so they can be styled.
@@ -38,29 +39,15 @@
   // into the given callback function.
   function getPosts(callback){
 
-    // Fetch the JSON file using XMLHttpRequest.
-    // Draws from:
-    // http://en.wikipedia.org/wiki/XMLHttpRequest
-    // http://vanilla-js.com/
-    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-    // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
-    var request = new XMLHttpRequest();
-
-    // When the file has loaded,
-    request.onload = function () {
-
-      // parse the JSON text into an array of post objects.
-      var posts = JSON.parse(request.responseText);
-
-      // Pass the posts array to the callback.
-      callback(posts);
-    };
-    request.open("GET", "posts.json", true);
-    request.send(null);
+    // Fetch the JSON file using jQuery
+    $.getJSON( "posts.json", function( data ) {
+      {
+        callback(data);
+      }
+    });
   }
 
   // The main program, which gets then renders posts.
-  console.log("Posts")
   getPosts(function (posts) {
     renderPosts(posts);
   });

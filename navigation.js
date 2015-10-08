@@ -32,7 +32,6 @@
 
   // Updates dynamic content based on the fragment identifier.
   function navigate(){
-    console.log("Navigating");
 
     // Get a reference to the "content" div.
     var contentDiv = document.getElementById("content"),
@@ -41,6 +40,11 @@
         // This gets rid of the "#" character.
         fragmentId = location.hash.substr(1);
 
+    //Check if it's a numbered post
+    if (fragmentId.substr(0,4) === "post") {
+      fragmentId = "post";
+    }
+
     // Set the "content" div innerHTML based on the fragment identifier.
     getContent(fragmentId, function (content) {
       $('div#content').html(content);
@@ -48,14 +52,6 @@
 
     // Toggle the "active" class on the link currently navigated to.
     setActiveLink(fragmentId);
-
-    if(fragmentId === "home") {
-      // The main program, which gets then renders posts.
-      console.log("Posts")
-      getPosts(function (posts) {
-        renderPosts(posts);
-      });
-    }
   }
 
   // If no fragment identifier is provided,

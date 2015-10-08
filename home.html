@@ -1,9 +1,15 @@
 <div class="container">
-  <div class="jumbotron text-center" >
+  <div id="jumbo" class="jumbotron text-center" >
     <h1>Welcome to Awesome Things!</h1>
     <p>This is where I blog about things that I find particularly awesome.</p>
   </div>
+
   <div id="posts">
   </div>
 </div>
+<script>
+  $(function() {
+    $("#jumbo").delay(4000).slideUp(1500);
+  });
+</script>
 <script src="renderPosts.js"></script>

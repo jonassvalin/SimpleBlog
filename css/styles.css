@@ -4,10 +4,21 @@ body {
 
 /* Make post names large. */
 .post-name {
-  font-size: 24pt;
+  font-size: 36pt;
+  color: #C93310;
 }
 
 /* Make post content green. */
 .post-content {
-  color: green;
+  font-size: 14pt;
+}
+
+/* Removes ugly outline around clicked buttons in navbar. */
+a:focus, a:active {
+  outline: none;
+}
+
+/* Removes underline from blog post links */
+a.nounderline:link {
+ text-decoration: none;
 }
